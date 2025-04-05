@@ -1,0 +1,277 @@
+/* App.module.css */
+.container {
+  padding: 40px;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f0f2f5 0%, #e2e8f0 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Elementlar orasidagi bo'shliq */
+}
+
+/* --- Color Panel --- */
+.colorPanel {
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.4s ease, box-shadow 0.3s ease;
+}
+
+.colorPanel:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.panelText {
+  font-size: 18px;
+  line-height: 1.8;
+  margin: 0;
+  font-weight: 400; /* Yengilroq shrift */
+  letter-spacing: 0.5px;
+  transition: color 0.4s ease;
+}
+
+/* --- Color Pickers --- */
+.colorPickersWrapper {
+  display: flex;
+  gap: 30px; /* Kattaroq bo'shliq */
+  flex-wrap: wrap;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.pickerGroup {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Kattaroq bo'shliq */
+}
+
+.pickerLabel {
+  font-weight: 600;
+  color: #2d3748;
+  white-space: nowrap; /* So'zlar sindirilmasin */
+}
+
+.colorInput {
+  cursor: pointer;
+  border: none;
+  width: 45px; /* Kichikroq */
+  height: 45px;
+  border-radius: 8px; /* Dumaloqroq */
+  overflow: hidden; /* Chegarani yashirish uchun */
+  -webkit-appearance: none; /* Brauzer standart uslublarini olib tashlash */
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent; /* Orqa fonni olib tashlash */
+  padding: 0; /* Ichki bo'shliqni olib tashlash */
+}
+/* Brauzerlar uchun maxsus uslublar */
+.colorInput::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+.colorInput::-webkit-color-swatch {
+  border: none;
+  border-radius: 8px;
+}
+.colorInput::-moz-color-swatch {
+  border: none;
+  border-radius: 8px;
+}
+
+.hexInput {
+  width: 100px;
+  padding: 10px 12px; /* O'lchamni moslashtirish */
+  border: 2px solid #e2e8f0;
+  border-radius: 10px; /* Dumaloqroq */
+  background: #f7fafc;
+  font-family: "Courier New", Courier, monospace; /* Monospace shrift */
+  font-size: 14px;
+  text-align: center;
+  color: #4a5568;
+}
+
+/* --- Name Input Form --- */
+.inputForm {
+  padding: 30px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.formTitle {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #1a202c;
+  font-weight: 600;
+  font-size: 24px;
+  border-bottom: 2px solid #e2e8f0; /* Chiziq */
+  padding-bottom: 15px;
+}
+
+.inputGroup {
+  display: flex;
+  gap: 20px; /* Kattaroq bo'shliq */
+  flex-wrap: wrap;
+}
+
+.nameInput {
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: 2px solid #e2e8f0;
+  flex: 1;
+  min-width: 200px; /* Minimal kenglik */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  font-size: 16px;
+  color: #2d3748;
+}
+
+.nameInput::placeholder {
+  color: #a0aec0;
+}
+
+.nameInput:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2); /* Focus effekti */
+}
+
+.addButton {
+  background: linear-gradient(90deg, #4a90e2 0%, #63b3ed 100%);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(74, 144, 226, 0.3);
+}
+
+.addButton:hover {
+  transform: translateY(-3px); /* Yuqoriga ko'tarilish */
+  box-shadow: 0 7px 15px rgba(74, 144, 226, 0.4);
+  background: linear-gradient(
+    90deg,
+    #3a80d2 0%,
+    #53a3dd 100%
+  ); /* To'qroq rang */
+}
+
+.addButton:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(74, 144, 226, 0.3);
+}
+
+/* --- Lists --- */
+.listsContainer {
+  display: grid; /* Grid layout */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Moslashuvchan ustunlar */
+  gap: 30px;
+}
+
+.listCard {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex; /* Ichki elementlarni boshqarish uchun */
+  flex-direction: column; /* Vertikal joylashuv */
+}
+
+.listCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.listTitle {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #2d3748;
+  font-weight: 600;
+  font-size: 20px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 10px;
+}
+
+.list {
+  padding-left: 0; /* List-style uchun joy ajratish */
+  margin: 0;
+  list-style-position: inside; /* Markerlarni ichkariga joylash */
+  color: #4a5568;
+  flex-grow: 1; /* Bo'sh joyni egallash */
+}
+
+.listItem {
+  margin-bottom: 10px;
+  padding: 5px 0;
+  transition: color 0.3s ease, transform 0.2s ease;
+  cursor: default; /* Oddiy kursor */
+  font-size: 16px;
+}
+
+.listItem:hover {
+  color: #4a90e2;
+  transform: translateX(5px); /* O'ngga siljish effekti */
+}
+
+.emptyList {
+  color: #a0aec0;
+  font-style: italic;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* --- Repo List (Similar to Name List) --- */
+.repoListCard {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  grid-column: 1 / -1; /* To'liq kenglikni egallash (agar kerak bo'lsa) */
+  /* Yoki grid-template-columns dagi o'rnini sozlang */
+}
+
+.repoListCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.repoListTitle {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #2d3748;
+  font-weight: 600;
+  font-size: 20px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 10px;
+}
+
+.repoList {
+  padding-left: 0;
+  margin: 0;
+  list-style: none; /* Markerlarni olib tashlash */
+  color: #4a5568;
+}
+
+.repoListItem {
+  margin-bottom: 12px;
+}
+
+.repoLink {
+  color: #4a90e2;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  word-break: break-all; /* Uzun havolalarni sindirish */
+}
+
+.repoLink:hover {
+  color: #3a80d2;
+  text-decoration: underline;
+}
