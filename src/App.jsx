@@ -145,7 +145,7 @@ function NameList({ title, items }) {
 function RepoList({ links }) {
   return (
     <div className={styles.repoListCard}>
-      <h4 className={styles.repoListTitle}>GitHub Repositories</h4>
+      <h4 className={styles.repoListTitle}>GitHub Repositories vite</h4>
       {links.length > 0 ? (
         <ul className={styles.repoList}>
           {links.map((link, index) => (
